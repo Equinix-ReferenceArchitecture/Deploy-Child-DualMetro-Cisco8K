@@ -25,7 +25,12 @@ output "secondary_device_random_name_child" {
 
 output "pass1_child" {
   value = equinix_network_device.Deploy-Child-Cisco8K.vendor_configuration.adminPassword
-  sensitive = true
+  /*sensitive = true*/
+}
+
+output "pass2_child" {
+  value = equinix_network_device.Deploy-Child-Cisco8K.secondary_device[0].vendor_configuration.adminPassword
+  /*sensitive = true*/
 }
 
 
